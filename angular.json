@@ -25,11 +25,6 @@
                         ],
                         "styles": [
                             "src/styles.css",
-                            "assets/css/animate.css",
-                            "assets/css/bootstrap.css",
-                            "assets/css/font-awesome.css",
-                            "assets/css/fonts.css",
-                            "assets/css/reset.css",
                             "node_modules/primeicons/primeicons.css",
                             "node_modules/primeng/resources/themes/nova-light/theme.css",
                             "node_modules/primeng/resources/primeng.min.css",

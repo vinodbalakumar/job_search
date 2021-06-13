@@ -19,7 +19,7 @@
     <ng-template let-car pTemplate="gridItem">
         <div style="padding:.5em" class="ui-g-12 ui-md-3">
             <p-panel [header]="car.vin" [style]="{'text-align':'center'}">
-                <img src="/assets/images/content/hiring_img1.png" width="60">
+                <img src="assets/images/content/hiring_img1.png" width="60">
                 <div class="car-detail">{{car.year}} - {{car.color}}</div>
                 <hr class="ui-widget-content" style="border-top:0">
                 <div class="t1">
@@ -33,7 +33,7 @@
     <ng-template let-car pTemplate="listItem">
         <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
             <div class="ui-g-12 ui-md-3" style="text-align:center">
-                <img src="/assets/images/content/hiring_img1.png">
+                <img src="assets/images/content/hiring_img1.png">
             </div>
             <div class="ui-g-12 ui-md-8 car-details">
                 <div class="ui-g">
@@ -60,7 +60,7 @@
 <p-dialog header="Car Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [style]="{width: '225px'}" (onAfterHide)="onDialogHide()">
     <div class="ui-g" *ngIf="selectedCar">
         <div class="ui-g-12" style="text-align:center">
-            <img src="/assets/images/content/hiring_img1.png">
+            <img src="assets/images/content/hiring_img1.png">
         </div>
         <div class="ui-g-4">Vin: </div>
         <div class="ui-g-8">{{selectedCar.vin}}</div>
