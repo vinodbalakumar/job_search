@@ -1,0 +1,46 @@
+ "node_modules/primeng/resources/themes/nova-light/theme.css",
+  "node_modules/primeng/resources/primeng.min.css",
+  "node_modules/primeicons/primeicons.css",
+  
+  
+  
+  npm install primeng --save      # Required
+npm install primeicons --save   # Mostly required
+npm install @angular/animations --save # For animations
+npm install primeflex --save # Optional, for FlexGrid
+npm install chart.js --save # Optional, for Charts
+npm install quill --save # Optional, for Editor component
+npm install fullcalendar@4.0.0-alpha.2 --save # Optional, for use FullCalendar (available on PrimeNG v7+)
+npm install prismjs --save # Optional, For code-highlighting
+npm install @angular/cdk --save
+
+
+
+add this in angular styles :
+
+  "node_modules/primeicons/primeicons.css",
+  "node_modules/primeng/resources/themes/nova-light/theme.css",
+  "node_modules/primeng/resources/primeng.min.css",
+  "node_modules/primeflex/primeflex.css"
+  
+  
+  Search Results
+Featured snippet from the web
+In Visual Studio Code, Shift + Alt + F is doing what Ctrl + K + D is doing in Visual Studio.
+...
+The code formatting is available in Visual Studio Code through the following shortcuts:
+On Windows Shift + Alt + F.
+
+
+
+ng g c bestDeals --skipTests=true
+
+
+https://en.wikipedia.org/w/api.php?search=In&action=opensearch&format=json
+maps :
+
+https://github.com/ultrasonicsoft/gmap-geolocation-demo
+17.483333,78.81666700000001
+
+
+https://maps.googleapis.com/maps/api/geocode/json?latlng=16.177748,%2081.128540&key=AIzaSyD86OW3KTU9W6La46FKA-Z1D4lm7xmLTRs

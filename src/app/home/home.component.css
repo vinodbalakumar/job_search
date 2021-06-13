@@ -1,0 +1,174 @@
+.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-details>.p-grid {
+    border: 1px solid #b3c2ca;
+    border-radius: 3px;
+    margin: 0.3em;
+    text-align: center;
+    padding: 2em 0 2.25em 0;
+}
+
+.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-data .car-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 24px;
+}
+
+.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-data .car-subtitle {
+    margin: 0.25em 0 2em 0;
+}
+
+.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-data button {
+    margin-left: 0.5em;
+}
+
+.carousel-demo .ui-carousel .ui-carousel-content .ui-carousel-item .car-data button:first-child {
+    margin-left: 0;
+}
+
+.carousel-demo .ui-carousel.custom-carousel .ui-carousel-dot-icon {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 50%;
+}
+
+.carousel-demo .ui-carousel.ui-carousel-horizontal .ui-carousel-content .ui-carousel-item.ui-carousel-item-start .car-details>.p-grid {
+    margin-left: 0.6em;
+}
+
+.carousel-demo .ui-carousel.ui-carousel-horizontal .ui-carousel-content .ui-carousel-item.ui-carousel-item-end .car-details>.p-grid {
+    margin-right: 0.6em;
+}
+
+ :host>>>.ui-autocomplete .ui-autocomplete-input {
+    color: inherit;
+    width: 100%;
+    height: 50px;
+}
+
+ :host>>>.ui-inputtext {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: transparent;
+    margin-top: 10%;
+    float: left;
+}
+
+ :host>>>.ui-widget,
+.ui-widget * {
+    box-sizing: initial;
+}
+
+ :host>>>.ui-autocomplete {
+    width: 100%;
+}
+
+ :host>>>.ui-autocomplete .ui-autocomplete-input {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+:host>>>.ui-autocomplete-multiple {
+    width: 100%;
+}
+
+:host>>>.ui-autocomplete-multiple {
+    padding-right: 20px;
+}
+
+:host>>>.ui-autocomplete-multiple {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+:host>>>.ui-autocomplete ::-webkit-input-placeholder {
+    color: #808080 !important;
+    font-weight: normal !important;
+    text-transform: initial;
+}
+
+:host>>>.ui-autocomplete-multiple ::-webkit-input-placeholder {
+    color: #808080 !important;
+    font-weight: normal !important;
+    text-transform: initial;
+}
+
+ :host>>>.ui-autocomplete :-moz-placeholder {
+    color: #808080 !important;
+    font-weight: normal !important;
+    text-transform: initial;
+}
+
+:host>>>.ui-autocomplete .ui-watermark {
+    color: #808080 !important;
+    font-weight: normal !important;
+    text-transform: initial;
+}
+
+.jp_slider_form_input input {
+    width: 100%;
+    height: 50px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: transparent;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.jp_main_slider_heading_wrapper h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: -9px;
+    margin-bottom: 60px;
+}
+
+.jp_slider_form_input {
+    border-bottom: 1px solid #8dc539;
+}
+
+.jp_slider_form_location_wrapper {
+    border-bottom: 1px solid #8dc539;
+}
+
+.jp_tittle_name_wrapper {
+    float: left;
+    width: 15%;
+    text-align: center;
+    background: #8dc539;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.jp_slider_form_btn_wrapper li a {
+    float: left;
+    width: 100%;
+    height: 50px;
+    line-height: 38px;
+    text-align: center;
+    background: #8dc539;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.jp_recent_job_main_wrapper {
+    float: left;
+    width: 100%;
+    padding-top: 87px;
+    padding-bottom: 130px;
+}

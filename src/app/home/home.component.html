@@ -1,0 +1,332 @@
+<!-- preloader Start -->
+<!-- Header Wrapper End -->
+<!-- map Wrapper Start -->
+<div class="jp_map_indx_wrapper_5">
+    <div #mapContainer id="map"></div>
+    <div class="jp_slider_form_main_wrapper_5">
+        <div class="jp_main_slider_heading_wrapper_5">
+            <h2>Find Your Job!</h2>
+        </div>
+
+        <div>
+            <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+                <div class="jp_slider_form_input">
+                    <p-autoComplete formControlName="description" styleClass="myclass" [(ngModel)]="desc" [suggestions]="filteredDesc" (completeMethod)="filterJobDesc($event)" [size]="30" placeholder="Keyword e.g. (Job Title, Description, Tags)" [minLength]="1" cacheTimeout="10000"
+                        required></p-autoComplete>
+                </div>
+                <div class="jp_slider_form_input">
+                    <p-autoComplete formControlName="country" styleClass="myclass" [(ngModel)]="country" [suggestions]="filteredCountriesSingle" (completeMethod)="filterCountrySingle($event)" [size]="30" placeholder="Keyword e.g. (Country name, India, Uk)" [minLength]="1"
+                        [field]='[0]' cacheTimeout="10000" required></p-autoComplete>
+                </div>
+                <div class="jp_slider_form_input">
+                    <span class="ui-fluid">
+					<p-autoComplete  formControlName="states" [(ngModel)]="states" [suggestions]="filteredCountriesMultiple" (completeMethod)="filterCountryMultiple($event)" styleClass="wid100" cacheTimeout="10000"
+					[field]='[0]' [minLength]="1" placeholder="e.g : states name" [size]="30"  [multiple]="true"  [disabled]="!countryValidate()"  >
+					</p-autoComplete> 
+					</span>
+                </div>
+
+
+                <div class="jp_slider_form_input">
+                    <span class="ui-fluid">
+					<p-autoComplete  formControlName="cities" [(ngModel)]="cities" [suggestions]="filteredCountriesMultiple1" (completeMethod)="filterCountryCities($event)" styleClass="wid100" cacheTimeout="10000"
+					[field]='[0]' [minLength]="1" placeholder="e.g. (City names)"   [multiple]="true"  [disabled]="!countryValidate()"  >
+					</p-autoComplete>
+					</span>
+                </div>
+
+
+                <div class="jp_slider_form_location_wrapper"> <i class="fa fa-th-large first_icon"></i>
+                    <select formControlName="category">                       
+					 <option value="">Job category</option>
+					<option *ngFor="let item of category ;let index = index" [value]="item">
+					 {{item}}</option>
+				  </select> <i class="fa fa-angle-down second_icon"></i>
+                </div>
+
+                <div class="jp_slider_form_location_wrapper"> <i class="fa fa-line-chart first_icon"></i>
+                    <select formControlName="experience">
+						<option value="">Experience</option>
+						<option *ngFor="let index of items;let item = index" [value]="item">
+							{{item}}   -   {{item+1}}   years</option>
+					</select> <i class="fa fa-angle-down second_icon"></i>
+                </div>
+
+                <div class="jp_slider_form_btn_wrapper">
+                    <ul>
+                        <li><a class="btn btn-default" type="submit" (click)="onClickSubmit(formdata)"><i class="fa fa-search"></i>&nbsp; SEARCH</a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- jp tittle slider Wrapper Start -->
+    <div class="jp_tittle_slider_main_wrapper">
+        <div class="container">
+            <div class="jp_tittle_name_wrapper">
+                <div class="jp_tittle_name">
+                    <h3>Tranding</h3>
+                    <h4>Jobs</h4>
+                </div>
+            </div>
+            <div class="jp_tittle_slider_wrapper">
+                <div class="jp_tittle_slider_content_wrapper">
+
+                    <p-carousel [value]="cars" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+                        <ng-template let-car pTemplate="item">
+                            <div class="car-details">
+
+                                <div class="jp_tittle_side_img_wrapper">
+                                    <img src="/assets/images/content/tittle_img1.png" alt="tittle_img" />
+                                </div>
+                                <div class="jp_tittle_side_cont_wrapper">
+                                    <h4>{{car.brand}}</h4>
+                                    <p>Webstrot Pvt. Ltd.</p>
+                                </div>
+                            </div>
+
+                        </ng-template>
+                    </p-carousel>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Recent jobs-->
+
+<!--  Job Types start-->
+<app-job-types></app-job-types>
+<!-- Job Types end-->
+
+<!-- jp counter Wrapper Start -->
+<app-counts-details></app-counts-details>
+<!--  jp counter Wrapper end  -->
+
+<!-- jp popular Categories Wrapper Start -->
+<app-popular-categories></app-popular-categories>
+<!-- jp popular Categories Wrapper End -->
+
+<!-- jp best deal Wrapper Start -->
+<app-best-deals></app-best-deals>
+<!-- jp best deal Wrapper End -->
+
+<!-- jp Hiring company Wrapper Start -->
+<app-hiring-companies></app-hiring-companies>
+<!-- jp Hiring company Wrapper End -->
+
+<!--  pricing plans start-->
+<app-pricing-plan></app-pricing-plan>
+<!--  pricing plans end-->
+
+
+
+
+
+<!-- jp downlord Wrapper Start -->
+<div class="jp_downlord_main_wrapper">
+    <div class="jp_downlord_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                <div class="jp_down_mob_img_wrapper">
+                    <img src="/assets/images/index_v/doun_img2.png" alt="mobail_img" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="ss_download_wrapper_details">
+                    <h1><span>Download</span><br>Job Portal App Now!</h1>
+                    <p>Fast, Simple & Delightful. All it takes is 30 seconds to Download.</p> <a href="#" class="ss_appstore"><span><i class="fa fa-apple" aria-hidden="true"></i></span> App Store</a>
+                    <a href="#" class="ss_playstore"><span><i class="fa fa-android" aria-hidden="true"></i></span> Play
+						Store</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 visible-sm visible-xs">
+                <div class="jp_down_mob_img_wrapper">
+                    <img src="/assets/images/index_v/doun_img2.png" class="img-responsive" alt="mobail_img" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jp downlord Wrapper End -->
+
+<div class="jp_main_footer_img_wrapper">
+    <div class="jp_newsletter_img_overlay_wrapper"></div>
+    <div class="jp_newsletter_wrapper_v">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="jp_newsletter_text">
+                        <img src="/assets/images/content/news_logo.png" class="img-responsive" alt="news_logo" />
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="jp_newsletter_field1"> <i class="fa fa-envelope-o"></i>
+                        <input type="text" placeholder="Enter Your Email">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jp Newsletter Wrapper End -->
+
+
+
+
+
+
+    <!-- jp footer Wrapper Start -->
+    <div class="jp_footer_main_wrapper">
+        <div class="container">
+            <div class="row">
+
+                <div class="jp_footer_three_sec_main_wrapper">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="jp_footer_first_cont_wrapper">
+                            <div class="jp_footer_first_cont">
+                                <h2>Who We Are</h2>
+                                <p>This is Photoshop's version of Lom Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum.
+                                    <br>
+                                    <br> Proin akshay handge vel velit auctor aliquet. Aenean sollicitudin,</p>
+                                <ul>
+                                    <li><i class="fa fa-plus-circle"></i> <a href="#">READ MORE</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper2">
+                            <div class="jp_footer_candidate">
+                                <h2>For candidate</h2>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Add a
+											Resume</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> candidate
+											Dashboard</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Past
+											Applications</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Job Alerts</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Bookmarks</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> My Account</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Your Jobs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper3">
+                            <div class="jp_footer_candidate">
+                                <h2>For Employers</h2>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Browse
+											candidates</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Employer
+											Dashboard</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Add Job</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Job Page</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Job
+											Packages</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Work
+											Process</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> My Account</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper4">
+                            <div class="jp_footer_candidate">
+                                <h2>Information</h2>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Terms &
+											Conditions</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Privacy
+											Policy</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Careers with
+											Us</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Sitemap</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Contact Us</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="jp_bottom_footer_Wrapper">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="jp_bottom_footer_left_cont">
+                                    <p>© 2019-20 Job Pro. All Rights Reserved.</p>
+                                </div>
+                                <div class="jp_bottom_top_scrollbar_wrapper">
+                                    <a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="jp_bottom_footer_right_cont">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li class="hidden-xs"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li class="hidden-xs"><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jp footer Wrapper End -->
+<!-- chat box Wrapper start -->
+<div id="chat-circle" class="btn btn-raised">
+    <i class="fa fa-envelope"></i>
+</div>
+<div class="chat-box">
+    <div class="chat-box-header">
+        ChatBot
+        <span class="chat-box-toggle"><i class="fa fa-times"></i></span>
+    </div>
+    <div class="chat-box-body">
+        <div class="chat-box-overlay">
+        </div>
+        <div class="chat-logs">
+
+        </div>
+        <!--chat-log -->
+    </div>
+    <div class="chat-input">
+        <form>
+            <input type="text" id="chat-input" placeholder="Send a message..." />
+            <button type="submit" class="chat-submit" id="chat-submit"><i class="fa fa-paper-plane"></i></button>
+        </form>
+    </div>
+</div>

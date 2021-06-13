@@ -1,0 +1,19 @@
+.gc_counter_cont_wrapper2 {
+    float: left;
+    width: 25%;
+    display: inline-block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #8dc539;
+    border-left: 0;
+    border-right: 0;
+}
+
+.gc_counter_cont_wrapper4 {
+    float: left;
+    width: 25%;
+    display: inline-block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #8dc539;
+}

@@ -1,0 +1,23 @@
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn {
+    background: rgba(141, 197, 57, 0.94);
+    margin-right: 2px;
+    margin-bottom: 2px;
+    width: 62px;
+}
+
+.t {
+    text-align: center;
+}
+
+.ui-dataview-list p {
+    display: block;
+}
+
+.ui-dataview-grid p {
+    display: none;
+}

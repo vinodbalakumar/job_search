@@ -1,0 +1,9 @@
+ctrl+space --> import compponent
+
+If you select a block of code and use the key sequence Ctrl+K+C, you'll comment out the section of code. Ctrl+K+U will uncomment the code.Apr 17, 2015
+
+
+npm install --save @angular/material
+
+
+https://gitlab.com/vinodbalakumar.p/jmeter_jmx-file.git

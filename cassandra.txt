@@ -1,0 +1,100 @@
+create keyspaces :
+
+
+CREATE KEYSPACE test
+    WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 3};
+	
+	
+	CREATE TABLE emp(
+emp_id int PRIMARY KEY,
+emp_name text,
+emp_city text,
+emp_sal varint,
+emp_phone varint);
+
+SELECT cql_version FROM system.local;
+
+I done 120 logic for mac_a3 it is working as expected.
+1. System should allow to do up to 150 screenings .pass
+2. After 120 screening system should "you have reached 120 Target" . Pass
+3. After 120 screening system should ask daysign off .pass
+4. After 120 it should allow up to 30 .pass
+5 . 120 records should sync with today's date .pass
+6. Remaining 30 should sync with today's date .pass
+7. In mobile online dashboard count should Display 120 records  .pass 
+8. In mobile reconsolation should show only 120 records with today's date .pass
+9.if user screend one beneficiary and that beneficiary make as drift tab ,then system should allow to select drift tab .pass
+10. System should cout 120 screenings based on screenings .pass
+11.In mobile local dashboard count should Display Total Screenings .pass
+
+
+
+enable_user_defined_functions
+
+
+
+
+select * from books where isbn='111' and author ='Penguin Group'
+
+
+
+SELECT count(*)
+FROM employee 
+where id  in ('8000','800000','80000','1')   limit  10\
+
+
+CREATE OR REPLACE FUNCTION sizeof(data set<text>)
+ CALLED ON NULL INPUT RETURNS int LANGUAGE java AS 'return data.size();';
+ 
+ enable_user_defined_functions=true
+
+
+update employee  SET designation =  {'java','phyton','oracle'} where id='1'
+
+ALTER TABLE employee ADD designation set<text>;
+
+
+CREATE TABLE groups ( groupname text, username text, email text, age int, PRIMARY KEY (groupname, username) )
+
+insert into groups (groupname,username,email,age) values ('chennai','vinod','vinodbala@gm.com',12)
+
+SELECT * FROM groups WHERE groupname = 'chennai'
+
+	CREATE TABLE emp(
+emp_id int,
+emp_name text ,
+emp_city text ,
+emp_sal varint,
+emp_phone varint,
+ PRIMARY KEY ((emp_id,emp_name,emp_city),emp_sal)
+); 
+
+drop table emp
+
+
+
+select * from emp where emp_id=2 and emp_name='2' and emp_city='2'
+
+
+   
+ CREATE OR REPLACE FUNCTION setTotal(input set<text>)
+  RETURNS NULL ON NULL INPUT
+   RETURNS int LANGUAGE java AS '    
+               int total = 0; total = input.size() == 0 ? 0 : input.size();    
+               return total;
+            ';    //http://www.batey.info/cassandra-udfs.html
+			
+			
+			
+			
+			
+			 
+   CREATE OR REPLACE FUNCTION uniq(state set<text>, val text)
+  CALLED ON NULL INPUT RETURNS set<text> LANGUAGE java
+  AS 'state.add(val); return state;';
+  CREATE OR REPLACE AGGREGATE uniq(text)
+  SFUNC uniq STYPE set<text> INITCOND {};
+  
+  
+
+https://www.datastax.com/blog/2015/02/basic-rules-cassandra-data-modeling
